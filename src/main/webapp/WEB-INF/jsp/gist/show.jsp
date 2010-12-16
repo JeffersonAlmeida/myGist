@@ -1,4 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
+
 <body>
 
 <p>
@@ -7,8 +10,11 @@
 </p>
 <p>
   <b>Codigo:</b>
-   ${gist.codigo}
 </p>
+ <pre id="codigo_hight" class="brush: js">
+ ${gist.codigo}
+
+ </pre>
 <p>
   <b>Tags:</b>
    ${gist.tags}
@@ -20,5 +26,9 @@
 
 <a href="<c:url value="/gists/${gist.id}/edit"/>">Edit</a>
 <a href="<c:url value="/gists"/>">Back</a>
+
+<script type="text/javascript">
+     SyntaxHighlighter.all()
+</script>
 
 </body>

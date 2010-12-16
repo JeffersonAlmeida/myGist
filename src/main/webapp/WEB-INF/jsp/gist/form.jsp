@@ -18,7 +18,8 @@
   </div>
   <div class="field">
     Codigo:<br />
-    <input type="text" name="gist.codigo" value="${gist.codigo}"/>
+    <textarea cols="50" rows="5" name="gist.codigo" id="codigo">${gist.codigo}</textarea>
+   
   </div>
   <div class="field">
     Tags:<br />
@@ -34,4 +35,5 @@
 </form>
 
 <a href="<c:url value="/gists"/>">Back</a>
+
 

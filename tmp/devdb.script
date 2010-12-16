@@ -36,8 +36,7 @@ GRANT DBA TO SA
 SET SCHEMA SYSTEM_LOBS
 INSERT INTO BLOCKS VALUES(0,2147483647,0)
 SET SCHEMA PUBLIC
-INSERT INTO GIST VALUES(2,NULL,'Java','POO','objetos','obj.showMessage("HI");',NULL)
-INSERT INTO GIST VALUES(4,NULL,'java','hello','main test','System',NULL)
+INSERT INTO GIST VALUES(4,NULL,'java','hello','main test',' function teste(){\u000d\u000a var nome;\u000d\u000a }',NULL)
 INSERT INTO GIST VALUES(5,NULL,'TESTE','TESTE','TESTE','TESTE',NULL)
 INSERT INTO GIST VALUES(18,NULL,'asdf','asdf','asdf','asdf',NULL)
 INSERT INTO GIST VALUES(25,NULL,'asdf  teste','java','asdf  teste','asdf teste',NULL)
