@@ -5,34 +5,41 @@
 	</c:forEach>
 </c:if>
 
-<form action="<c:url value="/gists"/>" method="post">
+<div class="formulario">
+<form id="formulario" name="formulario" action="<c:url value="/gists"/>" method="post">
   
+  <fieldset>
+  	<legend>Novo Gists</legend>
   <c:if test="${not empty gist.id}">
     <input type="hidden" name="gist.id" value="${gist.id}"/>
     <input type="hidden" name="_method" value="put"/>
   </c:if>
-
-  <div class="field">
-    Nome:<br />
-    <input type="text" name="gist.nome" value="${gist.nome}"/>
-  </div>
-  <div class="field">
-    Codigo:<br />
-    <textarea cols="50" rows="5" name="gist.codigo" id="codigo">${gist.codigo}</textarea>
+<Br>	
+  <div>
+    <label class="requiredLabel">Nome:</label>
+    <input type="text" name="gist.nome" id="nome" value="${gist.nome}" class="required"/>
+  </div><Br>
+  <div>
+   <label class="requiredLabel"> Codigo</label>
+    <textarea class="required" cols="50" rows="10" name="gist.codigo" id="codigo">${gist.codigo}</textarea>
    
-  </div>
-  <div class="field">
-    Tags:<br />
-    <input type="text" name="gist.tags" value="${gist.tags}"/>
-  </div>
-  <div class="field">
-    Linguagem:<br />
-    <input type="text" name="gist.linguagem" value="${gist.linguagem}"/>
-  </div>
+  </div><Br>
+  <div>
+     <label class="requiredLabel">Tags:</label>
+    <input class="required" type="text" name="gist.tags" id="tags" value="${gist.tags}"/>
+  </div><Br>
+  <div>
+    <label class="requiredLabel"> Linguagem:</label>
+ 
+    <input type="text" class="required" id="linguagem" name="gist.linguagem" value="${gist.linguagem}"/>
+  </div><Br>		
   <div class="actions">
     <button type="submit">send</button>
   </div>
+  
+  </fieldset>
 </form>
+</div>
 
 <a href="<c:url value="/gists"/>">Back</a>
 

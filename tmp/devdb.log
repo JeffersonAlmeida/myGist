@@ -1,5 +1,10 @@
 /*C3*/SET SCHEMA PUBLIC
-DELETE FROM GIST WHERE ID=4
-INSERT INTO GIST VALUES(4,NULL,'java','hello','main test',' function teste(){\u000d\u000a var nome;\u000d\u000a }\u000d\u000a\u000d\u000aclass teste{\u000d\u000avar $nome;\u000d\u000afuction teste($nome){\u000d\u000a\u000d\u000a}\u000d\u000a}',NULL)
+DELETE FROM GIST WHERE ID=32
+INSERT INTO GIST VALUES(32,NULL,'php','teste php','asdf','<?php\u000d\u000a\u000d\u000afunction teste(){\u000d\u000a\u000d\u000a}',NULL)
 COMMIT
-DISCONNECT
+DELETE FROM GIST WHERE ID=32
+INSERT INTO GIST VALUES(32,NULL,'php','teste php','asdf','<?php\u000d\u000a\u000d\u000afunction teste(){\u000d\u000a\u000d\u000a}\u000d\u000a\u000d\u000a?>',NULL)
+COMMIT
+DELETE FROM GIST WHERE ID=32
+INSERT INTO GIST VALUES(32,NULL,'php','teste php','asdf','\u000d\u000afunction teste(){\u000d\u000a\u000d\u000a}\u000d\u000a\u000d\u000a',NULL)
+COMMIT

@@ -2,8 +2,6 @@
 
 <body>
 
-<h1> Consulta </h1>
-
 <form method="get" action="<c:url value='/gists_search'/>" >
 
   <div class="field">
@@ -17,21 +15,21 @@
 
 </form>
 
-<h1>Listing Gists</h1>
-
-<table>
-  <tr>
-   <th>nome</th>
-   <th>codigo</th>
-   <th>tags</th>
-   <th>linguagem</th>
+<fieldset>
+	<legend>Gists Cadastrados</legend>
+<table class="list">
+  <tr class="row0">
+   <th>Nome</th>
+   <th>C&oacute;digo</th>
+   <th>Tags</th>
+   <th>Linguagem</th>
    <th></th>
    <th></th>
    <th></th>
   </tr>
-
+<tbody>
 <c:forEach items="${gistList}" var="gist">
-  <tr>
+  <tr class="row1">
       <td>
       ${gist.nome}
     </td>
@@ -44,19 +42,20 @@
       <td>
       ${gist.linguagem}
     </td>
-      <td><a href="<c:url value="/gists/${gist.id}"/>">show</a></td>
-    <td><a href="<c:url value="/gists/${gist.id}/edit"/>">edit</a></td>
+      <td><a href="<c:url value="/gists/${gist.id}"/>">Ver</a></td>
+    <td><a href="<c:url value="/gists/${gist.id}/edit"/>">Editar</a></td>
     <td>
       <form action="<c:url value="/gists/${gist.id}"/>" method="post">
     	  <input type="hidden" name="_method" value="delete"/>
-    	  <button type="submit" onclick="return confirm('Are you sure?')">destroy</button>
+    	  <button type="submit" onclick="return confirm('Are you sure?')">Remover</button>
 	    </form>
 	  </td>
     </tr>
 </c:forEach>
+</tbody>
 </table>
 
 <br />
-<a href="<c:url value="/gists/new"/>">New Gist</a> 
-
+<a href="<c:url value="/gists/new"/>">Novo Gist</a> 
+</fieldset>
 </body>

@@ -3,8 +3,8 @@
 
 <h1>Listing Gists</h1>
 
-<table>
-  <tr>
+<table class="list">
+  <tr class="row0">
    <th>nome</th>
    <th>codigo</th>
    <th>tags</th>
@@ -13,7 +13,7 @@
    <th></th>
    <th></th>
   </tr>
-
+<tbody>
 <c:forEach items="${gistList}" var="gist">
   <tr>
       <td>
@@ -38,6 +38,7 @@
 	  </td>
     </tr>
 </c:forEach>
+</tbody>
 </table>
 
 </body>
